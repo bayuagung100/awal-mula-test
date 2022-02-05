@@ -1,0 +1,21 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0 !important;
+    min-height: 100vh;
+}
+
+body {
+    background-color: #e8e8e8 !important;
+    .app {
+        max-width: 448px;
+        background-color: #fff;
+        min-height: 100vh;
+        margin: auto;
+        overflow: auto;
+    }
+}

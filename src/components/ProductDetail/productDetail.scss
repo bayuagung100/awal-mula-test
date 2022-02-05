@@ -1,0 +1,126 @@
+.fixed-detail {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 448px;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 1px;
+    height: 40px;
+    .header-container {
+        display: flex;
+        position: relative;
+        width: 100%;
+        padding: 10px 20px;
+        .back {
+            cursor: pointer;
+        }
+    }
+}
+
+.product-detail-container {
+    padding: 0 20px;
+    margin: 50px 10px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .slideshow {
+        // margin: 0 auto;
+        overflow: hidden;
+        // max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .slideshowSlider {
+        white-space: nowrap;
+        transition: ease 1000ms;
+    }
+    .slide {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        min-height: 210px;
+        // max-height: 210px;
+        cursor: pointer;
+    }
+
+    .slideshowDots {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px 0;
+
+        .prev {
+            display: flex;
+            align-items: center;
+            color: rgb(125, 160, 36);
+            cursor: pointer;
+        }
+        .next {
+            display: flex;
+            align-items: center;
+            color: rgb(125, 160, 36);
+            cursor: pointer;
+        }
+    }
+    .slideshowDot {
+        display: inline-flex;
+        height: 48px;
+        width: 48px;
+        background: rgb(244, 244, 244) none repeat scroll 0% 0%;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 0px 5px;
+    }
+    .slideshowDot.active {
+        border-radius: 10px;
+        border: 1px solid rgb(125, 160, 36);
+    }
+
+    .product-detail {
+        width: 100%;
+        margin-top: 10px;
+        .category {
+            font-size: 13px;
+            font-weight: 700;
+            color: rgb(38, 83, 41);
+        }
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .price-container {
+            width: 100%;
+            display: flex;
+            -moz-box-align: center;
+            align-items: center;
+            -moz-box-pack: justify;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            .price {
+                font-size: 20px;
+            }
+            .stock {
+                background: rgb(237, 247, 237) none repeat scroll 0% 0%;
+                padding: 2.5px 9.5px;
+                font-size: 11px;
+                box-sizing: border-box;
+                border-radius: 4px;
+                &.available {
+                    color: rgb(72, 97, 64);
+                    border: 1px solid rgb(38, 83, 41);
+                }
+                &.unavailable {
+                    color: rgb(255, 0, 0);
+                    border: 1px solid rgb(255, 0, 0);
+                }
+            }
+        }
+    }
+}
